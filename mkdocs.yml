@@ -1,0 +1,68 @@
+site_name: UiPath Cartographer Tech Workshop
+site_url: https://uipath-practice.github.io/CartographerWorkshop/
+site_description: Hands-on learner's handbook for designing processes with UiPath Cartographer and taking them from discovery to production
+site_author: Diana Mincu
+
+theme:
+  name: material
+  logo: assets/images/Partner Success Logo.png
+  favicon: assets/images/favicon.png
+  font:
+    text: Inter
+  palette:
+    scheme: default
+    primary: deep orange
+    accent: orange
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.integrate
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+
+hooks:
+  - hooks/split_cols.py
+
+# main.py provides environment variables (training_url, training_tenant, env_label)
+# driven by the COURSE_ENV env var (staging | prod). See main.py.
+plugins:
+  - search
+  - macros:
+      module_name: main
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+# Published navigation only. Work-in-progress pages live in mkdocs.local.yml.
+nav:
+  - Home: index.md
+  - Warranty Resolution at Cobalt Ridge: warranty-resolution/index.md
+  - From Process to Production: process-to-production/index.md
+  - Next Steps: next-steps.md
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+extra:
+  generator: false

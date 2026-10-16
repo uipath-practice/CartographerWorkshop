@@ -1,0 +1,488 @@
+/* UiPath brand fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap');
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* UiPath Robotic Orange — override Material primary color */
+:root {
+  --md-primary-fg-color: #FA4616;
+  --md-primary-fg-color--light: #fc7a52;
+  --md-primary-fg-color--dark: #d13a12;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.7);
+}
+
+/* White header bar — logo + site title area only; tabs remain orange */
+.md-header {
+  background-color: #ffffff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.md-header__title,
+.md-header__topic,
+.md-ellipsis {
+  color: #1a1a1a;
+  font-family: 'Nunito', sans-serif;
+}
+
+.md-header__button,
+.md-header__button.md-logo {
+  color: #1a1a1a;
+}
+
+.md-header__button:hover {
+  color: #000000;
+  opacity: 1;
+}
+
+/* Scale the logo to a comfortable height in the header */
+.md-header__button.md-logo img {
+  height: 1.4rem;
+  width: auto;
+}
+
+/* ── Mobile drawer (hamburger menu) ─────────────────────────────────────── */
+@media screen and (max-width: 76.1875em) {
+
+  /* White background for the drawer header area (was orange) */
+  .md-nav--primary > .md-nav__title {
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    /* Allow the site title to wrap instead of truncating */
+    white-space: normal;
+    height: auto;
+    min-height: 3.4rem;
+    line-height: 1.3;
+    padding-bottom: 1rem;
+  }
+
+  /* Cover any parent container that bleeds orange behind the title */
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    background-color: #ffffff;
+  }
+
+  /* Back-arrow / logo button colour inside the drawer title */
+  .md-nav--primary > .md-nav__title .md-nav__button {
+    color: #1a1a1a !important;
+  }
+
+  /* Logo size inside the drawer */
+  .md-nav--primary > .md-nav__title .md-logo img {
+    height: 1.6rem;
+    width: auto;
+  }
+
+  /* Nav item links — 20% smaller than body text in hamburger menu */
+  .md-nav--primary .md-nav__link {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* Hide empty footer meta bar */
+.md-footer-meta {
+  display: none;
+}
+
+/* Footer navigation — compact height (-25%) */
+.md-footer__link {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Footer navigation — white text on dark background */
+.md-footer__link,
+.md-footer__title,
+.md-footer__direction,
+.md-footer .md-ellipsis {
+  color: #ffffff !important;
+}
+
+/* Image utilities */
+
+/* Center an image: ![alt](img.png){ .center } */
+img.center {
+  display: block;
+  margin: 1.5rem auto;
+}
+
+/* Bordered screenshot: ![alt](img.png){ .screenshot } */
+img.screenshot {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  display: block;
+  margin: 1.5rem auto;
+}
+
+/* Figure caption — place italic text on the line directly after an image */
+img + em {
+  display: block;
+  text-align: center;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.85rem;
+  margin-top: -0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Two-column image grid
+   Named shortcuts:  .img-cols-50 (50/50)  .img-cols-30 (30/70)  .img-cols-70 (70/30)
+   Generic split via CSS vars: <div class="img-cols" style="--col1:2;--col2:5" …>   */
+.img-cols {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin: 1.5rem 0;
+  padding: 0 1.5rem;
+}
+
+.img-cols > div {
+  min-width: 0;
+}
+
+.img-cols > div img {
+  width: 90%;
+  margin: 0 auto 0.5rem !important;
+}
+
+/* Admonition styling — match body text size */
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: 1em;
+}
+
+/* Admonition — UiPath brand colors */
+
+/* note (Dark Blue #1E6482) */
+.md-typeset .admonition.note  {
+  border-color: rgba(30, 100, 130, 0.4) !important;
+  background-color: rgba(30, 100, 130, 0.05) !important;
+}
+.md-typeset .note > .admonition-title { background-color: rgba(30, 100, 130, 0.12) !important; }
+.md-typeset .note > .admonition-title::before { background-color: #1E6482 !important; }
+
+/* info (Dark Blue #1E6482 — prominent) */
+.md-typeset .admonition.info  {
+  border-color: rgba(30, 100, 130, 0.4) !important;
+  background-color: rgba(30, 100, 130, 0.07) !important;
+}
+.md-typeset .info > .admonition-title { background-color: rgba(30, 100, 130, 0.20) !important; }
+.md-typeset .info > .admonition-title::before { background-color: #1E6482 !important; }
+
+/* tip (Bright Blue #CCF2FF + Dark Blue accent) */
+.md-typeset .admonition.tip   {
+  border-color: rgba(30, 100, 130, 0.4) !important;
+  background-color: rgba(204, 242, 255, 0.45) !important;
+}
+.md-typeset .tip > .admonition-title  { background-color: rgba(30, 100, 130, 0.15) !important; }
+.md-typeset .tip > .admonition-title::before  { background-color: #1E6482 !important; }
+
+/* warning (Offset Orange #A32200) */
+.md-typeset .admonition.warning {
+  border-color: rgba(163, 34, 0, 0.4) !important;
+  background-color: rgba(163, 34, 0, 0.05) !important;
+}
+.md-typeset .warning > .admonition-title { background-color: rgba(163, 34, 0, 0.15) !important; }
+.md-typeset .warning > .admonition-title::before { background-color: #A32200 !important; }
+
+/* Flex ratios come from CSS custom properties set by named shortcuts or inline style */
+.img-cols > div:first-child { flex: var(--col1, 1); }
+.img-cols > div:last-child  { flex: var(--col2, 1); }
+
+.img-cols-50 { --col1: 1; --col2: 1; }
+.img-cols-30 { --col1: 3; --col2: 7; }
+.img-cols-70 { --col1: 7; --col2: 3; }
+
+/* Top-level navigation tabs — 20% larger than Material default (0.7rem) */
+.md-tabs__link {
+  font-size: 0.84rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Left sidebar navigation — explicit Inter (inherits body font, but made explicit) */
+.md-nav__link,
+.md-nav__title {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Code blocks — 10% smaller font, wrap long lines */
+.md-typeset pre {
+  font-size: 0.9em;
+}
+
+.md-typeset pre > code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Table — body text size, full borders, grey header */
+.md-typeset table:not([class]) {
+  border-collapse: collapse;
+}
+
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  font-size: 0.8rem !important;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: #f0f0f0;
+}
+
+/* ── Process-to-production journey strip ───────────────────────────────────
+   Usage (md_in_html):
+   <div class="journey" markdown>
+   <div class="journey-step here"><strong>Discover</strong><span>Cartographer</span></div>
+   ...
+   </div>                                                                   */
+.md-typeset .journey {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5rem;
+  position: relative;
+  margin: 1.5rem 0 0.75rem;
+  padding: 1.25rem 1rem 1rem;
+  background: #182126;
+  border-radius: 8px;
+}
+.md-typeset .journey::before {
+  content: "";
+  position: absolute;
+  left: 1.6rem;
+  right: 2.2rem;
+  top: 1.85rem;
+  height: 2px;
+  background: #FA4616;
+}
+.md-typeset .journey-step {
+  position: relative;
+  padding-top: 1.6rem;
+  color: #ffffff;
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+.md-typeset .journey-step::before {
+  content: "";
+  position: absolute;
+  top: 0.3rem;
+  left: 0;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  border: 2px solid #FA4616;
+  background: #182126;
+}
+.md-typeset .journey-step.here::before { background: #FA4616; }
+.md-typeset .journey-step strong {
+  display: block;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+}
+.md-typeset .journey-step span { color: #C9D1D6; }
+.md-typeset .journey-legend {
+  font-size: 0.72rem;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .journey { grid-template-columns: repeat(2, 1fr); row-gap: 1rem; }
+  .md-typeset .journey::before { display: none; }
+}
+
+/* ── How Cartographer works: four-step flow cards ───────────────────────── */
+.md-typeset .flow-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.4rem;
+  margin: 1.5rem 0;
+}
+.md-typeset .flow-card {
+  position: relative;
+  padding: 0.9rem 1rem 0.6rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-top: 4px solid #FA4616;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+.md-typeset .flow-card:not(:last-child)::after {
+  content: "\2192";
+  position: absolute;
+  right: -1.15rem;
+  top: 45%;
+  color: #FA4616;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.md-typeset .flow-card.accent {
+  background: #182126;
+  color: #ffffff;
+  border-color: #182126;
+  border-top-color: #0BA2B3;
+}
+.md-typeset .flow-card ul { margin: 0.3rem 0 0; }
+.md-typeset .flow-card li { margin-bottom: 0.25rem; }
+.md-typeset .flow-card p { margin: 0.4rem 0; }
+.md-typeset .flow-label {
+  display: block;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FA4616;
+}
+.md-typeset .flow-card.accent .flow-label { color: #5BCBDE; }
+
+/* ── About Cobalt Ridge: stat tiles, chips, brief card ──────────────────── */
+.md-typeset .stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  margin: 1.2rem 0 1.5rem;
+}
+.md-typeset .stat-tile {
+  background: #F6F6F6;
+  border-radius: 6px;
+  padding: 0.8rem 0.9rem;
+}
+.md-typeset .stat-tile b {
+  display: block;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.35rem;
+  line-height: 1.1;
+  color: #182126;
+}
+.md-typeset .stat-tile span {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.68rem;
+  line-height: 1.35;
+  color: #646E78;
+}
+.md-typeset .chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.4rem 0 1.2rem;
+}
+.md-typeset .chip-row span {
+  padding: 0.2rem 0.65rem;
+  border-radius: 1rem;
+  font-size: 0.68rem;
+  background: rgba(250, 70, 22, 0.1);
+  color: #A32200;
+}
+.md-typeset .chip-row.systems span {
+  background: rgba(11, 162, 179, 0.12);
+  color: #15839A;
+}
+.md-typeset .brief-card {
+  margin: 1.5rem 0;
+  padding: 1rem 1.2rem 0.6rem;
+  background: #182126;
+  color: #ffffff;
+  border-radius: 8px;
+}
+.md-typeset .brief-card .target-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  margin: 0.5rem 0;
+  font-family: 'Nunito', sans-serif;
+}
+.md-typeset .brief-card .from { font-size: 1.1rem; color: #A0AAB9; text-decoration: line-through; }
+.md-typeset .brief-card .arrow { color: #FA4616; font-size: 1.1rem; }
+.md-typeset .brief-card .to { font-size: 1.5rem; font-weight: 700; color: #FA4616; }
+.md-typeset .brief-card .what { font-size: 0.75rem; color: #C9D1D6; }
+.md-typeset .brief-card p { font-size: 0.75rem; color: #E6EBEE; }
+.md-typeset .brief-card strong { color: #ffffff; }
+
+@media screen and (max-width: 59.9375em) {
+  .md-typeset .flow-cards { grid-template-columns: repeat(2, 1fr); }
+  .md-typeset .flow-card::after { display: none; }
+  .md-typeset .stat-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Collapsible top-level sections (pages with .collapsible-sections) ──── */
+.md-typeset h2.section-toggle {
+  cursor: pointer;
+  user-select: none;
+  padding: 0.5rem 0.6rem;
+  margin-left: -0.6rem;
+  margin-right: -0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.15s;
+}
+.md-typeset h2.section-toggle:hover { background-color: rgba(250, 70, 22, 0.06); }
+.md-typeset h2.section-toggle::before {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin-right: 0.6em;
+  border-right: 2px solid #FA4616;
+  border-bottom: 2px solid #FA4616;
+  transform: translateY(-0.15em) rotate(45deg);
+  transition: transform 0.15s;
+}
+.md-typeset h2.section-toggle.is-collapsed::before { transform: translateY(-0.05em) rotate(-45deg); }
+.md-typeset .section-body.is-collapsed { display: none; }
+
+/* ── Left tree: highlight the section you are reading ───────────────────── */
+.md-nav__link--active,
+.md-nav__link--active:hover {
+  color: #FA4616 !important;
+  font-weight: 700;
+}
+.md-sidebar--primary .md-nav--secondary .md-nav__link--active {
+  box-shadow: inset 3px 0 0 #FA4616;
+  padding-left: 0.4rem;
+  margin-left: -0.4rem;
+}
+
+/* ── Left tree: collapsible main sections ───────────────────────────────── */
+.md-nav--secondary .toc-group { position: relative; }
+.md-nav--secondary .toc-group > .md-nav__link { padding-right: 1.4rem; }
+.md-nav--secondary .toc-toggle {
+  position: absolute;
+  right: 0;
+  top: 0.1rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  padding: 0;
+  border: none;
+  border-radius: 3px;
+  background: none;
+  cursor: pointer;
+  color: var(--md-default-fg-color--light);
+  z-index: 1;
+}
+.md-nav--secondary .toc-toggle:hover { background: rgba(250, 70, 22, 0.08); }
+.md-nav--secondary .toc-toggle::before {
+  content: "";
+  display: block;
+  width: 0.42rem;
+  height: 0.42rem;
+  margin: 0.3rem auto 0;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.15s;
+}
+.md-nav--secondary .toc-toggle:hover { color: #FA4616; }
+.md-nav--secondary .toc-collapsed > .toc-toggle::before { transform: translate(-0.08rem, 0.08rem) rotate(-45deg); }
+.md-nav--secondary .toc-collapsed > nav.md-nav { display: none; }

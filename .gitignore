@@ -1,0 +1,20 @@
+# MkDocs build output
+site/
+.cache/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Screenshot pipeline secrets
+scripts/.env
+
+# Local-only WIP navigation (never deployed)
+mkdocs.local.yml
+
+# Archived content (retired lessons/exercises) — never deployed
+Archive/
+
+# OS
+.DS_Store
