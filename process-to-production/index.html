@@ -1,0 +1,888 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hands-on learner's handbook for designing processes with UiPath Cartographer and taking them from discovery to production">
+      
+      
+        <meta name="author" content="Diana Mincu">
+      
+      
+        <link rel="canonical" href="https://uipath-practice.github.io/CartographerWorkshop/process-to-production/">
+      
+      
+        <link rel="prev" href="../warranty-resolution/">
+      
+      
+        <link rel="next" href="../next-steps/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>From Process to Production - UiPath Cartographer Tech Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#from-process-to-production" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="UiPath Cartographer Tech Workshop" class="md-header__button md-logo" aria-label="UiPath Cartographer Tech Workshop" data-md-component="logo">
+      
+  <img src="../assets/images/Partner Success Logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UiPath Cartographer Tech Workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              From Process to Production
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../warranty-resolution/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Warranty Resolution at Cobalt Ridge
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  From Process to Production
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../next-steps/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Next Steps
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="UiPath Cartographer Tech Workshop" class="md-nav__button md-logo" aria-label="UiPath Cartographer Tech Workshop" data-md-component="logo">
+      
+  <img src="../assets/images/Partner Success Logo.png" alt="logo">
+
+    </a>
+    UiPath Cartographer Tech Workshop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../warranty-resolution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Warranty Resolution at Cobalt Ridge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    From Process to Production
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    From Process to Production
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Goal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pdd-isnt-the-end-of-the-story" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The PDD isn't the end of the story
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hands-on-take-the-warranty-design-to-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-on: take the warranty design to production
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hands-on: take the warranty design to production">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ask-cartographer-to-design-the-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Ask Cartographer to design the solution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-review-the-sdd-and-mark-it-as-reviewed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Review the SDD and mark it as reviewed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-get-your-coding-agent-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Get your coding agent ready
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-hand-the-sdd-to-the-coding-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Hand the SDD to the coding agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-review-what-was-built-in-studio-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Review what was built in Studio Web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-publish-the-process-and-the-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Publish the process and the solution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-run-it-and-watch-it-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Run it and watch it work
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-close-the-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Close the loop
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../next-steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Next Steps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="from-process-to-production">From Process to Production<a class="headerlink" href="#from-process-to-production" title="Permanent link">&para;</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Here is our plan for this exercise:</p>
+<ol>
+<li>See how the PDD you just published travels on, from design to build, run and improvement.</li>
+<li>Turn the Cobalt Ridge design into a <strong>Solution Design Document (SDD)</strong> with <strong>Cartographer</strong>.</li>
+<li>Hand the SDD to a coding agent that builds, tests and publishes the solution on the UiPath Platform.</li>
+</ol>
+</div>
+<h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<p>By the end of this exercise you'll have followed one design all the way down the line. Your Cobalt Ridge PDD becomes an SDD, the SDD becomes a working solution in <strong>Maestro</strong> and <strong>Orchestrator</strong>, and the process map, the documents and the solution end up linked in one place. You'll also see how a change to the map finds its way back to the people, and the agents, who maintain the automation.</p>
+<h2 id="the-pdd-isnt-the-end-of-the-story">The PDD isn't the end of the story<a class="headerlink" href="#the-pdd-isnt-the-end-of-the-story" title="Permanent link">&para;</a></h2>
+<p>In most organizations, a process document is where the work stops being visible. It gets attached to an email, someone rebuilds it as a slide, and the developer who finally builds the automation never sees the evidence behind it.</p>
+<p>On the UiPath Platform, the design keeps moving. Here's the journey:</p>
+<div class="journey">
+<div class="journey-step here"><strong>Discover</strong><span>Cartographer</span></div>
+<div class="journey-step here"><strong>Document</strong><span>PDD and SDD</span></div>
+<div class="journey-step"><strong>Build</strong><span>Coding agents with UiPath skills</span></div>
+<div class="journey-step"><strong>Collaborate</strong><span>Automation Hub and Studio Web</span></div>
+<div class="journey-step"><strong>Run</strong><span>Orchestrator and Maestro</span></div>
+<div class="journey-step"><strong>Improve</strong><span>Runtime insights feed the Map of Work</span></div>
+</div>
+<p class="journey-legend">Filled dots: the stages where Cartographer works. Open dots: where the rest of the UiPath Platform takes over.</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Stage</th>
+<th style="text-align: left;">What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Discover</strong></td>
+<td style="text-align: left;">Cartographer captures the process from your evidence. It asks only about real gaps, recommends an answer, and you decide.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Document</strong></td>
+<td style="text-align: left;">The PDD says <em>what</em> the process does and why. The SDD says <em>how</em> to build it. Every document is generated from the Map of Work, never invented, and changing a fact updates only the sections built from it.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Build</strong></td>
+<td style="text-align: left;">A coding agent such as <strong>Claude Code</strong> reads the SDD. The <strong>UiPath skills</strong> teach it how to build on UiPath, so it can plan the tasks, build the solution and test it.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Collaborate</strong></td>
+<td style="text-align: left;">The documentation goes to the <strong>Process Repository</strong> in <strong>Automation Hub</strong>, next to the process map. The solution goes to <strong>Studio Web</strong>, where your team can review and own it.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Run</strong></td>
+<td style="text-align: left;">The solution is deployed to <strong>Orchestrator</strong> and runs as an agentic process in <strong>Maestro</strong>: agents, robots and people working on the same case.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Improve</strong></td>
+<td style="text-align: left;">Analysts refine the process map themselves. Developers and coding agents are notified to update the automation, and runtime insights flow back into the Map of Work.</td>
+</tr>
+</tbody>
+</table>
+<p>The point is simple: the same design is carried from the first interview to the running process. Nothing is retyped, and nothing loses its link to the evidence and the KPI it serves.</p>
+<h2 id="hands-on-take-the-warranty-design-to-production">Hands-on: take the warranty design to production<a class="headerlink" href="#hands-on-take-the-warranty-design-to-production" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Before you begin: prerequisites</p>
+<p>Have these ready <strong>before</strong> you start:</p>
+<ul>
+<li><strong>The first exercise, finished</strong> — your Cobalt Ridge project, with the PDD published to Automation Hub.</li>
+<li><strong>A coding agent</strong> — this guide uses <a href="https://docs.claude.com/en/docs/claude-code/overview"><strong>Claude Code</strong></a>.</li>
+<li><strong>Node.js</strong> — needed to install the <strong><code>uip</code> CLI</strong>.</li>
+<li><strong>A UiPath Cloud account</strong>. In this workshop we will use: <code>https://staging.uipath.com/uipathlabsworkshop/Fusion_Cartographe_20260921_ocrw</code>. Talk to your trainer if you are not invited.</li>
+</ul>
+</div>
+<h3 id="1-ask-cartographer-to-design-the-solution">1. Ask Cartographer to design the solution<a class="headerlink" href="#1-ask-cartographer-to-design-the-solution" title="Permanent link">&para;</a></h3>
+<p>Go back to your Cobalt Ridge project in Cartographer. When you published the PDD, the confirmation offered a <strong>Design the solution</strong> follow-up. Click it.</p>
+<p><img alt="Publish confirmation with the Design the solution follow-up" class="screenshot" src="index.images/design-the-solution.png" width="700" /></p>
+<p>If you don't see the follow-up any more, ask for it directly:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Design the solution for this process and generate the Solution Design Document (SDD).
+</code></pre></div>
+<p>Cartographer turns the TO-BE into a solution architecture on the UiPath Platform. Your future state is a case, so expect the SDD to be built around <strong>Maestro</strong> case orchestration, with the AI agents, human-in-the-loop tasks and integrations your design calls for.</p>
+<div class="admonition note">
+<p class="admonition-title">Give it time</p>
+<p>This is a big pass. Expect the SDD to take around 20 minutes. When it finishes, the agent also estimates how much manual effort the same work would have taken.</p>
+</div>
+<h3 id="2-review-the-sdd-and-mark-it-as-reviewed">2. Review the SDD and mark it as reviewed<a class="headerlink" href="#2-review-the-sdd-and-mark-it-as-reviewed" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open <strong>Solution design (SDD)</strong> in the left navigation. Walk the table of contents: process overview, diagram, activities, gateways and events, data objects, integrated components, error handling, triggers, project structure, testing strategy and next steps.</li>
+<li>Read the summary in the conversation. It lists the status, the template validation result, the architecture, what the SDD covers, the result of an independent review, and any open items. Open items are tagged <strong>[SME REVIEW]</strong> so you know exactly what still needs a human answer.</li>
+<li>Cartographer deliberately leaves the build hand-off open until you approve the design. Mark the SDD as <strong>reviewed</strong> in the document panel.</li>
+<li>Click <strong>Download</strong> to save the SDD as a Word document.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Why this matters</p>
+<p>The build never starts from an unreviewed design. A person signs off on the SDD before any coding agent touches it.</p>
+</div>
+<h3 id="3-get-your-coding-agent-ready">3. Get your coding agent ready<a class="headerlink" href="#3-get-your-coding-agent-ready" title="Permanent link">&para;</a></h3>
+<p>Your coding agent needs two things to build on UiPath: the <strong><code>uip</code> CLI</strong> to talk to the platform, and the <strong>UiPath skills</strong> to know how to use it.</p>
+<ol>
+<li>
+<p>Install the CLI. This gives you the <code>uip</code> command:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>@uipath/cli
+</code></pre></div>
+</li>
+<li>
+<p>Sign in to the workshop environment. Your coding agent reuses this session, so it acts as you on the platform:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>uip<span class="w"> </span>login<span class="w"> </span>--authority<span class="w"> </span>https://staging.uipath.com<span class="w"> </span>-t<span class="w"> </span>Fusion_Cartographe_20260921_ocrw
+</code></pre></div>
+</li>
+<li>
+<p>Install the UiPath skills for Claude Code:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>uip<span class="w"> </span>skills<span class="w"> </span>install<span class="w"> </span>--agent<span class="w"> </span>claude
+</code></pre></div>
+</li>
+<li>
+<p>Check the setup:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>uip<span class="w"> </span>login<span class="w"> </span>status
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>uip<span class="w"> </span>skills<span class="w"> </span>list
+</code></pre></div>
+</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Sessions, identity, and security</p>
+<p>The agent inherits your session and acts with your permissions. Avoid approving a blanket rule for every <code>uip</code> command, since that also covers destructive ones. Approve read and list commands as they come up instead.</p>
+</div>
+<h3 id="4-hand-the-sdd-to-the-coding-agent">4. Hand the SDD to the coding agent<a class="headerlink" href="#4-hand-the-sdd-to-the-coding-agent" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Create an empty folder for the solution, for example <code>CobaltWarrantySolution</code>, and open it in Claude Code.</li>
+<li>
+<p>Attach the SDD you downloaded and send:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Here you have the SDD of the automation solution we have to build for the warranty resolution process at Cobalt Ridge Automation. Build, implement and then test the uipath solution according to the SDD and then publish it on Orchestrator. Prefix the name of every artifact you create with {YourName}.
+</code></pre></div>
+</li>
+<li>
+<p>Watch how it starts. The agent reads the SDD and loads the <strong>UiPath planner</strong> skill, which handles SDD-driven builds. The SDD carries a planner hand-off marker, so the agent knows which build path to follow. It then checks your tenant login and any existing project folder, and looks up the <strong>Integration Service</strong> connections it will need, before it derives the build tasks.</p>
+</li>
+<li>Answer its questions as they come up, and approve commands as it runs them.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Why the name prefix?</p>
+<p>Everyone in the workshop builds in the same tenant. A <code>{YourName}</code> prefix keeps your packages, processes and agents from colliding with your neighbour's.</p>
+</div>
+<h3 id="5-review-what-was-built-in-studio-web">5. Review what was built in Studio Web<a class="headerlink" href="#5-review-what-was-built-in-studio-web" title="Permanent link">&para;</a></h3>
+<p>Open <strong>Studio Web</strong> and find your solution. You should recognise the TO-BE you designed in Cartographer, now executable:</p>
+<ul>
+<li>The <strong>Maestro</strong> process, with its stages, decisions and handoffs.</li>
+<li>The <strong>AI agents</strong>, each with a system prompt that describes its role. Open one and check that it matches the role in your design. The variance agent from the first exercise is a good one to look at.</li>
+<li>The <strong>human-in-the-loop</strong> tasks, such as the high-variance verification you added live.</li>
+<li>Any <strong>RPA</strong> workflows or integrations behind the system tasks.</li>
+</ul>
+<p>Check that <strong>Validation issues</strong> shows zero before you go any further.</p>
+<h3 id="6-publish-the-process-and-the-solution">6. Publish the process and the solution<a class="headerlink" href="#6-publish-the-process-and-the-solution" title="Permanent link">&para;</a></h3>
+<p>Publishing puts each piece where it belongs:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">What</th>
+<th style="text-align: left;">Where it goes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Process documentation and map</strong></td>
+<td style="text-align: left;"><strong>Process Repository</strong> in Automation Hub, linked to the Map of Work</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Solution</strong></td>
+<td style="text-align: left;"><strong>Studio Web</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Deployment</strong></td>
+<td style="text-align: left;"><strong>Orchestrator</strong> and <strong>Maestro</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Open your Cobalt Ridge entry in Automation Hub. Under <strong>Documentation</strong>, the process map now sits next to your PDD and SDD, not in a slide or an email. Open the map to see the model the solution runs.</p>
+<h3 id="7-run-it-and-watch-it-work">7. Run it and watch it work<a class="headerlink" href="#7-run-it-and-watch-it-work" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Start a test run of the process in Maestro and follow the instance as it moves through the stages.</li>
+<li>Open <strong>Action Center</strong> when a human task comes up, and complete it.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Going further</p>
+<p>Your coding agent can build more than the process. Ask it for a simple warranty desk for the Cobalt Ridge operations team: one screen with every case, its status and its handoffs, built on the same solution.</p>
+</div>
+<h3 id="8-close-the-loop">8. Close the loop<a class="headerlink" href="#8-close-the-loop" title="Permanent link">&para;</a></h3>
+<ol>
+<li>In Automation Hub, open the process map and choose <strong>Edit Process Model</strong>.</li>
+<li>Make a small change to the model and save it.</li>
+</ol>
+<p>When an analyst changes the model, the developers or coding agents who own the automation are notified to update it. Runtime insights from the running process flow back into the Map of Work. That's the <strong>Improve</strong> stage: the design and the automation keep improving together, long after the PDD was signed off.</p>
+<div class="admonition tip">
+<p class="admonition-title">Training Environment</p>
+<p>Log in at <strong><a href="https://staging.uipath.com/uipathlabsworkshop">https://staging.uipath.com/uipathlabsworkshop</a></strong> and remember using tenant <strong>Fusion_Cartographe_20260921_ocrw</strong> for this exercise.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../warranty-resolution/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Warranty Resolution at Cobalt Ridge">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Warranty Resolution at Cobalt Ridge
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../next-steps/" class="md-footer__link md-footer__link--next" aria-label="Next: Next Steps">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Next Steps
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "toc.integrate", "toc.follow", "search.highlight", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

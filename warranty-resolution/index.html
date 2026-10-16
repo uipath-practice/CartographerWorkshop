@@ -1,0 +1,1262 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hands-on learner's handbook for designing processes with UiPath Cartographer and taking them from discovery to production">
+      
+      
+        <meta name="author" content="Diana Mincu">
+      
+      
+        <link rel="canonical" href="https://uipath-practice.github.io/CartographerWorkshop/warranty-resolution/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../process-to-production/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Warranty Resolution at Cobalt Ridge - UiPath Cartographer Tech Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#warranty-resolution-at-cobalt-ridge-automation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="UiPath Cartographer Tech Workshop" class="md-header__button md-logo" aria-label="UiPath Cartographer Tech Workshop" data-md-component="logo">
+      
+  <img src="../assets/images/Partner Success Logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UiPath Cartographer Tech Workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Warranty Resolution at Cobalt Ridge
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Warranty Resolution at Cobalt Ridge
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../process-to-production/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  From Process to Production
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../next-steps/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Next Steps
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="UiPath Cartographer Tech Workshop" class="md-nav__button md-logo" aria-label="UiPath Cartographer Tech Workshop" data-md-component="logo">
+      
+  <img src="../assets/images/Partner Success Logo.png" alt="logo">
+
+    </a>
+    UiPath Cartographer Tech Workshop
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Warranty Resolution at Cobalt Ridge
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Warranty Resolution at Cobalt Ridge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Goal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-cartographer-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Cartographer works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-cobalt-ridge-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About Cobalt Ridge Automation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-connect-to-the-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Connect to the VM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-register-your-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Register your VM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-open-the-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Open the Assistant
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-the-project-and-check-its-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set up the project and check its knowledge
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set up the project and check its knowledge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-the-project-and-give-it-the-brief" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Create the project and give it the brief
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ask-what-it-already-knows-before-uploading-anything" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Ask what it already knows, before uploading anything
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capture-and-review-the-as-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capture and review the AS-IS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Capture and review the AS-IS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-add-the-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Add the evidence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-watch-the-current-state-wiki-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Watch the current-state wiki build
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-check-the-provenance-on-a-captured-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Check the provenance on a captured item
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-choose-the-map-format-then-read-the-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Choose the map format, then read the checklist
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-the-future-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design the future state
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Design the future state">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-steer-the-level-of-detail-on-one-task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Steer the level of detail on one task
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ask-for-the-future-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Ask for the future state
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-review-the-transformation-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Review the Transformation Decisions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-live-edits-and-verify-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Make live edits and verify them
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Make live edits and verify them">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-make-the-agentic-edit-and-use-steer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Make the agentic edit, and use Steer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-verify-the-change-landed-everywhere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Verify the change landed everywhere
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-the-pdd-and-trace-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generate the PDD and trace it
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generate the PDD and trace it">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-generate-and-download-the-pdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Generate and download the PDD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-trace-your-own-edits-in-the-pdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Trace your own edits in the PDD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-publish-the-pdd-to-automation-hub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Publish the PDD to Automation Hub
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-ask-a-teammate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional: ask a teammate
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../process-to-production/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    From Process to Production
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../next-steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Next Steps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="warranty-resolution-at-cobalt-ridge-automation">Warranty Resolution at Cobalt Ridge Automation<a class="headerlink" href="#warranty-resolution-at-cobalt-ridge-automation" title="Permanent link">&para;</a></h1>
+<div class="collapsible-sections" hidden></div>
+
+<div class="admonition tip">
+<p class="admonition-title">Here is our plan for this exercise:</p>
+<ol>
+<li>Create a <strong>Cartographer</strong> project, give it the business brief, and check what it already knows.</li>
+<li>Feed it the evidence a real team would have and review the current state (AS-IS) it builds.</li>
+<li>Design the future state (TO-BE), make a live edit, and verify it landed everywhere.</li>
+<li>Generate the <strong>PDD</strong>, trace your edits inside it, and publish it to <strong>Automation Hub</strong>.</li>
+</ol>
+</div>
+<h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<p>By the end of this exercise you'll have taken one process from a blank project to a published Process Definition Document (PDD). You'll have a current-state wiki with provenance on every fact, a future-state design where every change is tied to a specific KPI, and a PDD that carries your own edits. That PDD is everything a Solution Design Document (SDD) needs.</p>
+<h2 id="how-cartographer-works">How Cartographer works<a class="headerlink" href="#how-cartographer-works" title="Permanent link">&para;</a></h2>
+<p><strong>Map the work once. Generate everything from it.</strong> With <strong>UiPath Cartographer</strong>, business analysts become cartographers. Instead of weeks of interviews and a blank canvas, a guided, AI-powered discovery conversation turns scattered process knowledge into one living definition of how the work runs: the <strong>Map of Work</strong>.</p>
+<div class="flow-cards">
+<div class="flow-card">
+<p><span class="flow-label">Bring what you have</span></p>
+<ul>
+<li>SOPs and policies</li>
+<li>Recorded walkthroughs</li>
+<li>Workshop notes</li>
+<li>Task captures</li>
+</ul>
+</div>
+<div class="flow-card">
+<p><span class="flow-label">Cartographer</span></p>
+<ul>
+<li><strong>Starts with context:</strong> universal, domain and your own knowledge</li>
+<li><strong>Asks only what's missing</strong></li>
+<li><strong>Reconciles your evidence</strong> and flags contradictions</li>
+<li><strong>Brings in the experts</strong> who know the answer</li>
+</ul>
+</div>
+<div class="flow-card accent">
+<p><span class="flow-label">Map of Work</span></p>
+<p>People, stages, systems and data, rules, exceptions, judgment and goals. Versioned, with a named owner and approver, and provenance on every fact.</p>
+</div>
+<div class="flow-card">
+<p><span class="flow-label">Generated from the map</span></p>
+<ul>
+<li><strong>PDD</strong> for decision-makers</li>
+<li><strong>SDD</strong> for developers and coding agents</li>
+<li><strong>Best-fit canvas:</strong> Case, BPMN or Flow, with the reasoning behind it</li>
+</ul>
+</div>
+</div>
+<p>Three ideas make the result something you can trust and build from:</p>
+<ul>
+<li><strong>Every fact is attributable.</strong> Each element carries its source and the person who verified it. Contradictions get resolved, not averaged.</li>
+<li><strong>No blank page.</strong> Cartographer already knows the usual shape of a process in your industry, and <strong>Process Atlas</strong> brings expert-attested maps you adapt rather than draw. It only asks what it can't work out.</li>
+<li><strong>Change the map, regenerate.</strong> Your documents are generated from the Map of Work, so nothing downstream drifts out of sync with how the business actually runs.</li>
+</ul>
+<p>You'll see every one of these in action in this exercise.</p>
+<h2 id="about-cobalt-ridge-automation">About Cobalt Ridge Automation<a class="headerlink" href="#about-cobalt-ridge-automation" title="Permanent link">&para;</a></h2>
+<p>Cobalt Ridge Automation builds industrial automation and material-handling equipment. When a customer's sortation line goes down, getting it running again is everybody's problem, and nobody's process.</p>
+<div class="stat-grid">
+<div class="stat-tile"><b>~7,400</b><span>warranty claims a year</span></div>
+<div class="stat-tile"><b>11.4 days</b><span>mean time from customer report to restored line</span></div>
+<div class="stat-tile"><b>96 hours</b><span>mean downtime for a P1 line outage</span></div>
+<div class="stat-tile"><b>$23.8M</b><span>annual warranty spend</span></div>
+</div>
+<p><strong>Seven functions</strong> pull together on every outage:</p>
+<div class="chip-row"><span>Support</span><span>Warranty administration</span><span>Engineering</span><span>Parts</span><span>Field service</span><span>Finance</span><span>Quality</span></div>
+
+<p><strong>Six systems and one very long email thread</strong> hold the work:</p>
+<div class="chip-row systems"><span>Support Cloud (CRSC)</span><span>WarrantyTrack WT-9</span><span>AssetVault</span><span>Helios CRM</span><span>SAP S/4HANA</span><span>FieldLink FSM</span><span>Email</span></div>
+
+<p>What drives the cost: manual re-keying, a weekly coverage gate, undocumented parts substitutions, late cost posting and repeat failures nobody links together.</p>
+<div class="brief-card">
+<p><span class="flow-label">The brief for FY2027</span></p>
+<div class="target-row"><span class="from">11.4 days</span><span class="arrow">&rarr;</span><span class="to">3.5 days</span><span class="what">mean resolution time</span></div>
+<div class="target-row"><span class="from">96 hours</span><span class="arrow">&rarr;</span><span class="to">24 hours</span><span class="what">P1 line downtime</span></div>
+<p>People keep authority over coverage, safety, engineering, substitution, restoration and finance decisions. <strong>Your job is to design how.</strong></p>
+</div>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Before you begin: prerequisites</p>
+<p>Have these ready <strong>before</strong> the session:</p>
+<ul>
+<li><strong>The workshop VM</strong> — or the latest Cartographer build installed on your own machine.</li>
+<li><strong>Your UiPath account</strong> — you'll register it on the machine and use it to sign in to the UiPath Assistant.</li>
+<li><strong>A UiPath Cloud account</strong>. In this workshop we will use: <code>https://staging.uipath.com/uipathlabsworkshop/Fusion_Cartographe_20260921_ocrw</code>. Talk to your trainer if you are not invited.</li>
+</ul>
+</div>
+<h3 id="1-connect-to-the-vm">1. Connect to the VM<a class="headerlink" href="#1-connect-to-the-vm" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>In a live workshop:</strong> connect to the virtual machine your trainer provides.</li>
+<li><strong>Self-paced (UiPath internal):</strong> create a new UiPath Studio &amp; Robot sandbox on <a href="https://uipathlabs.uipath.com/sandboxes/new">uipathlabs.uipath.com/sandboxes/new</a> and pick the <strong>Internal Enablement Workshop</strong> template.</li>
+</ul>
+<p>You can skip the VM entirely if you already have the latest Cartographer build installed on your machine.</p>
+<h3 id="2-register-your-vm">2. Register your VM<a class="headerlink" href="#2-register-your-vm" title="Permanent link">&para;</a></h3>
+<div class="img-cols img-cols-30">
+<div>
+<ol>
+<li>In the Windows search bar, type <strong>Email &amp; accounts</strong>.</li>
+<li>Click <strong>Add a work or school account</strong>.</li>
+<li>Sign in with your UiPath account.
+  </li>
+</ol>
+</div>
+<div>
+<p><img alt="Windows Email &amp; accounts settings with Add a work or school account highlighted" class="screenshot" src="index.images/register-work-account.png" />
+  </p>
+</div>
+</div>
+<h3 id="3-open-the-assistant">3. Open the Assistant<a class="headerlink" href="#3-open-the-assistant" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open the <strong>UiPath Assistant</strong> and sign in with your UiPath account (via Microsoft).</li>
+<li>Connect to the <strong>Fusion_Cartographe_20260921_ocrw</strong> tenant at <strong><a href="https://staging.uipath.com/uipathlabsworkshop">https://staging.uipath.com/uipathlabsworkshop</a></strong>.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Working self-paced?</p>
+<p>You can connect to any other environment you have access to, for example <code>staging.uipath.com/uipathlabs</code> or <code>cloud.uipath.com/uipathlabs</code> with the Playground tenant.</p>
+</div>
+<h2 id="set-up-the-project-and-check-its-knowledge">Set up the project and check its knowledge<a class="headerlink" href="#set-up-the-project-and-check-its-knowledge" title="Permanent link">&para;</a></h2>
+<h3 id="1-create-the-project-and-give-it-the-brief">1. Create the project and give it the brief<a class="headerlink" href="#1-create-the-project-and-give-it-the-brief" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Open <strong>Cartographer</strong>. On the home screen, click the <strong>+</strong> icon next to <strong>Business Processes</strong> in the left panel.</p>
+<p><img alt="Cartographer home screen with the Business Processes section in the left panel" class="screenshot" src="index.images/cartographer-home-new-project-W.png" width="900" /></p>
+</li>
+<li>
+<p>The <strong>New project</strong> dialog opens. It has a <strong>Name</strong> field and a <strong>Project instructions</strong> box that already contains a generic default paragraph.</p>
+<p><img alt="New project dialog with the Name field and the default project instructions" class="screenshot" src="index.images/new-project-dialog-W.png" width="900" /></p>
+</li>
+<li>
+<p>In <strong>Name</strong>, type:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Cobalt Warranty Resolution from Outage Intake to Restored Outcome
+</code></pre></div>
+</li>
+<li>
+<p>In <strong>Project instructions</strong>, leave the default paragraph where it is. Paste the brief below straight after it, so the box reads as one continuous set of instructions:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gh">#context:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Cobalt Ridge Automation handles approximately 7,400 warranty claims each year across industrial automation and material-handling equipment. The current process takes a mean 11.4 days from customer report to restored line, with mean P1 downtime of 96 hours, while data and work are fragmented across Cobalt Ridge Support Cloud (CRSC), WarrantyTrack WT-9, AssetVault, Helios CRM, SAP S/4HANA, FieldLink FSM, and email. Manual re-keying, a weekly coverage gate, undocumented parts substitutions, late cost posting, and weak repeat-failure linkage drive rework, customer-credit exposure, and $23.8M of annual warranty spend.
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="gh"># Objectives</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">-</span><span class="w"> </span>Reduce mean resolution time from 11.4 days to 3.5 days by FY2027 through an immediate coordination case, six sequential primary stages, conditional supporting stages, automated follow-up, and visible handoffs.
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">-</span><span class="w"> </span>Reduce P1 line downtime from 96 hours to 24 hours by FY2027 through impact triage, managed containment, field-work coordination, and restoration validation.
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">-</span><span class="w"> </span>Replace email-only work handoffs with a coordination case linked to WT-9, while retaining human authority for coverage, safety, engineering, substitution, restoration, and finance decisions.
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="k">-</span><span class="w"> </span>Improve evidence completeness, decision traceability, cost-reconciliation visibility, and repeat-failure learning through active stages, timing controls, and linked quality work.
+</code></pre></div>
+</li>
+<li>
+<p>Check that the dialog now shows your title and the full instructions.</p>
+<p><img alt="New project dialog filled in with the project name and the Cobalt Ridge brief" class="screenshot" src="index.images/project-name-and-instructions.png" width="600" /></p>
+</li>
+<li>
+<p>Leave <strong>Context files</strong> empty and <strong>Approval mode</strong> at its default. Keep <strong>Disable screen context</strong> checked, then click <strong>Create</strong>.</p>
+</li>
+</ol>
+<p>You now have an empty project with no conversations yet. The <strong>Business Analysis</strong> and <strong>project-checklist</strong> skills are listed, and your instructions sit in the right panel.</p>
+<p><img alt="Empty Cartographer project with the brief in the Project instructions panel" class="screenshot" src="index.images/empty-project-created-W.png" width="900" /></p>
+<h3 id="2-ask-what-it-already-knows-before-uploading-anything">2. Ask what it already knows, before uploading anything<a class="headerlink" href="#2-ask-what-it-already-knows-before-uploading-anything" title="Permanent link">&para;</a></h3>
+<p>Don't upload anything yet. Paste this into the composer and send it:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Verify your process-knowledge / process-skills and answer only from it:
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>(1) the 3 KPIs that typically matter most for industrial-equipment warranty resolution, with reference baselines and targets;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>(2) the compliance and audit controls this process must enforce;
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>(3) the persona titles who run it, by stage;
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>(4) where UiPath best-practice suggests Document Understanding vs. DMN / business rules vs. AI Agent.
+</code></pre></div>
+<p><img alt="Knowledge-check prompt typed into the Cartographer composer" class="screenshot" src="index.images/knowledge-check-prompt-W.png" width="900" /></p>
+<p>The agent consults its <strong>Process Knowledge</strong> and answers all four parts. You get KPIs with reference baselines plus good and stretch targets, a list of controls, personas by stage, and a component-placement table covering Document Understanding, DMN and business rules, AI agents and human-in-the-loop.</p>
+<p><img alt="Component placement table recommending Document Understanding, DMN, AI Agent or human action per type of work" class="screenshot" src="index.images/component-placement-answer-W.png" width="900" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Why this matters</p>
+<p>Anything that comes from process knowledge rather than from your own documents is flagged as <strong>not confirmed</strong>. Cartographer never passes off a general industry assumption as one of your facts.</p>
+</div>
+<h2 id="capture-and-review-the-as-is">Capture and review the AS-IS<a class="headerlink" href="#capture-and-review-the-as-is" title="Permanent link">&para;</a></h2>
+<h3 id="1-add-the-evidence">1. Add the evidence<a class="headerlink" href="#1-add-the-evidence" title="Permanent link">&para;</a></h3>
+<p>The evidence pack is the kind of material a team already has: process flows from two departments, a process-owner interview, a workshop transcript, an executive brief, a systems architecture draft and a printed claim record.</p>
+<div class="img-cols img-cols-50">
+<div>
+<ol>
+<li>On the VM desktop, open the <strong>Cobalt Ridge Industrial Equipment Warranty Resolution-FUSION</strong> folder. It holds the evidence files.</li>
+<li>Attach the files listed below and send them with this prompt:
+  </li>
+</ol>
+</div>
+<div>
+<p><img alt="VM desktop with the Cobalt Ridge Industrial Equipment Warranty Resolution-FUSION folder" class="screenshot" src="index.images/vm-desktop-evidence-folder.png" />
+  </p>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Add to the AS-IS references.
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Using your own machine instead of the VM?</p>
+<p>Download the evidence pack and unzip it anywhere on your machine:</p>
+<p><a class="md-button" download="Cobalt-Ridge-Warranty-Resolution-Company-Source.zip" href="dependencies/Cobalt-Ridge-Warranty-Resolution-Company-Source.zip"><strong>Download the Cobalt Ridge evidence pack (.zip)</strong></a></p>
+<p>It contains the same files as the folder on the VM desktop.</p>
+</div>
+<p><strong>Files to attach:</strong></p>
+<ul>
+<li><code>a_process_flows/CobaltRidge_FieldService-and-Parts_Dispatch-and-Fulfillment_AS-IS.svg</code></li>
+<li><code>a_process_flows/CobaltRidge_Support-and-Warranty-Admin_Claim-Intake-and-Adjudication_CURRENT-STATE.pptx</code></li>
+<li><code>b_process_owner_interview/Interview_Priya-Raghunathan_Warranty-Process-Owner_2026-02-19.docx</code></li>
+<li><code>c_workshop_transcript/Workshop-Transcript_Warranty-Resolution-Current-State_2026-03-26.docx</code></li>
+<li><code>d_executive_brief/CobaltRidge_Warranty-Resolution-Transformation_Executive-Brief_FY2027.pptx</code></li>
+<li><code>e_systems_architecture/CobaltRidge_Warranty-Systems-Architecture_Current-State_v0.9-DRAFT.docx</code></li>
+<li><code>e_systems_architecture/CobaltRidge_Warranty-Systems-Landscape_Current-State.svg</code></li>
+<li><code>f_claim_record/WC-2026-04871_WarrantyTrack-WT9_Full-Claim-Record_PRINTED.docx</code></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Leave these two files out</p>
+<ul>
+<li><code>00_START_HERE_BA-notes.md</code> — background for the facilitator, not input for the agent.</li>
+<li><code>meta-DO-NOT-FEED-TO-AGENT.txt</code> — held back on purpose. It's used to test provenance tracking.</li>
+</ul>
+</div>
+<p><img alt="Evidence files attached in the composer with the Add to the AS-IS references prompt" class="screenshot" src="index.images/attach-evidence-files-W.png" width="900" /></p>
+<h3 id="2-watch-the-current-state-wiki-build">2. Watch the current-state wiki build<a class="headerlink" href="#2-watch-the-current-state-wiki-build" title="Permanent link">&para;</a></h3>
+<p>While the agent reads, open <strong>Current Process</strong> in the left navigation and follow the pages as it writes them: <strong>Overview</strong>, <strong>Business Rules</strong>, <strong>Compliance</strong>, <strong>Data Inputs Outputs</strong>, <strong>Exception Handling</strong>, <strong>Metrics</strong>, <strong>Pain Points</strong>, <strong>Scheduling and Triggers</strong> and <strong>Source Inventory</strong>.</p>
+<p>The files appear one by one. When it's done, the agent tells you the source-grounded facts are written and it's synchronizing the checklist.</p>
+<p><img alt="Cartographer reporting that the AS-IS reference intake is complete" class="screenshot" src="index.images/as-is-intake-complete-W.png" width="900" /></p>
+<h3 id="3-check-the-provenance-on-a-captured-item">3. Check the provenance on a captured item<a class="headerlink" href="#3-check-the-provenance-on-a-captured-item" title="Permanent link">&para;</a></h3>
+<p>Open <strong>Pain Points</strong> and expand <strong>Sources and Metadata</strong> at the top of the page.</p>
+<p>You can see which agent captured each item and when, the source documents and the exact sections it came from, and the file metadata. This provenance stays attached for the whole life of the Map of Work.</p>
+<p><img alt="Pain Points page with the Sources and Metadata panel expanded" class="screenshot" src="index.images/pain-points-provenance-W.png" width="900" /></p>
+<h3 id="4-choose-the-map-format-then-read-the-checklist">4. Choose the map format, then read the checklist<a class="headerlink" href="#4-choose-the-map-format-then-read-the-checklist" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>The agent asks how today's process should be mapped. It offers a case map (recommended), a BPMN model or a simple flow. Read its reasoning, then pick <strong>case map</strong>.</p>
+<p><img alt="Clarifying question offering a case map, a BPMN model or a simple flow for the AS-IS" class="screenshot" src="index.images/choose-map-format-W.png" width="900" /></p>
+</li>
+<li>
+<p>Open the <strong>Checklist</strong> panel. You'll see a readiness count, plus how many rows are confirmed, pending, sourced from documents, need confirmation or are missing. Yellow tags mark anything the agent assumed from process knowledge rather than took from your documents.</p>
+<p><img alt="Checklist rows with facts sourced from documents and Confirm buttons" class="screenshot" src="index.images/confirm-checklist-facts-W.png" width="900" /></p>
+<p><img alt="Checklist readiness summary with confirmed, pending and missing counts" class="screenshot" src="index.images/checklist-readiness-W.png" width="900" /></p>
+</li>
+</ol>
+<h2 id="design-the-future-state">Design the future state<a class="headerlink" href="#design-the-future-state" title="Permanent link">&para;</a></h2>
+<h3 id="1-steer-the-level-of-detail-on-one-task">1. Steer the level of detail on one task<a class="headerlink" href="#1-steer-the-level-of-detail-on-one-task" title="Permanent link">&para;</a></h3>
+<p>In the AS-IS design, find the task <strong>Reapprove Divergent Scope</strong>. It's too shallow, so ask for more detail:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>On task "Reapprove Divergent Scope" please expand that task into its logical steps, at least 3 no more than 5, for greater granularity.
+</code></pre></div>
+<p><img alt="Prompt asking to expand the Reapprove Divergent Scope task" class="screenshot" src="index.images/expand-task-prompt-W.png" width="900" /></p>
+<p>The task becomes a four-step sequence: capture the divergence, document its scope, request review and record the decision. The diagram is redrawn around it.</p>
+<p><img alt="AS-IS diagram redrawn around the expanded task" class="screenshot" src="index.images/expanded-task-diagram-W.png" width="900" /></p>
+<h3 id="2-ask-for-the-future-state">2. Ask for the future state<a class="headerlink" href="#2-ask-for-the-future-state" title="Permanent link">&para;</a></h3>
+<p>Once you've confirmed the AS-IS, send:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Lets proceed with the to-be future state design. Call out all your proposed changes, transformations along with the reasons why they are being proposed especially as relates to kpis, objectives, pain points or business goals.
+</code></pre></div>
+<p><img alt="Future-state design prompt in the composer" class="screenshot" src="index.images/future-state-prompt-W.png" width="900" /></p>
+<p>The agent consults process knowledge and finds an eleven-stage reference baseline to design against. It confirms a case is still the best execution style. Then it makes its first value argument: for P1 outages, run containment, entitlement, evidence and parts in parallel, instead of waiting behind a weekly coverage date. That's in service of the 24-hour P1 objective.</p>
+<div class="admonition note">
+<p class="admonition-title">This one takes a while</p>
+<p>The future-state pass runs for several minutes. A good moment for a coffee.</p>
+</div>
+<h3 id="3-review-the-transformation-decisions">3. Review the Transformation Decisions<a class="headerlink" href="#3-review-the-transformation-decisions" title="Permanent link">&para;</a></h3>
+<p>Open <strong>Transformation Decisions</strong> under <strong>Future Design</strong> and walk through three or four rows.</p>
+<p>Each change gets its own row: the AS-IS area, the AS-IS issue, the proposed target change, and a <strong>User decision</strong> column that stays at <strong>Proposed — Future Process Review</strong> until you confirm it. Every change is argued against a specific number: 24-hour P1 downtime, 2.3 days of intake and asset uncertainty, a 4.2-day coverage decision, first-time fix and auditability, or the 22% of repeat failures that never reach quality investigation.</p>
+<p><img alt="Transformation Decisions table linking each proposed change to a KPI" class="screenshot" src="index.images/transformation-decisions-W.png" width="900" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Why this matters</p>
+<p>This is the artifact that answers the big question: does the tool tie changes to business value, or does it just redraw the diagram?</p>
+</div>
+<h2 id="make-live-edits-and-verify-them">Make live edits and verify them<a class="headerlink" href="#make-live-edits-and-verify-them" title="Permanent link">&para;</a></h2>
+<h3 id="1-make-the-agentic-edit-and-use-steer">1. Make the agentic edit, and use Steer<a class="headerlink" href="#1-make-the-agentic-edit-and-use-steer" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>In the future-state design, find the finance human task <strong>Resolve variance and recovery</strong>. Send:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>In resolve variance and recovery, it is listed as a human task. Change this to be conducted by an agent with human verification when variance exceeds 25% of total cost.
+</code></pre></div>
+<p><img alt="Prompt changing Resolve variance and recovery to an agent with human verification" class="screenshot" src="index.images/variance-agent-prompt-W.png" width="900" /></p>
+</li>
+<li>
+<p>The agent is probably halfway through a multi-step validation pass. There's no point waiting for a pass that's about to be outdated, so click <strong>Steer</strong> on the queued message to push your request in early.</p>
+</li>
+<li>
+<p>The request is accepted as a refinement. The agent updates the future case design, the business rules, the agentic task list and the transformation list. Then a second agent runs an independent review of the first one's work.</p>
+<p><img alt="Agent applying the refinement across the design files" class="screenshot" src="index.images/steer-refinement-updates-W.png" width="900" /></p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Compliance guardrails</p>
+<p>Every request is checked against known compliance rules, from regulators or from the company. A change that broke one, for example <em>no agent may approve any variance</em>, would be refused and explained, not silently accepted.</p>
+</div>
+<h3 id="2-verify-the-change-landed-everywhere">2. Verify the change landed everywhere<a class="headerlink" href="#2-verify-the-change-landed-everywhere" title="Permanent link">&para;</a></h3>
+<p>Run three checks:</p>
+<ol>
+<li>
+<p><strong>The TO-BE diagram.</strong> Find the cost reconciliation stage. <strong>Resolve variance and recovery</strong> now carries an <strong>AI agent</strong> tag, followed by a <strong>Variance over 25%?</strong> decision and <strong>Verify high variance disposition</strong> as a human action. Check that nothing else in the process moved.</p>
+<p><img alt="TO-BE case map with the agent task, the Variance over 25% decision and the human verification step" class="screenshot" src="index.images/to-be-variance-decision-W.png" width="900" /></p>
+</li>
+<li>
+<p><strong>Business Rules in the wiki.</strong> The new business rule is there, and it's confirmed.</p>
+<p><img alt="Business Rules page in the wiki listing the confirmed rules" class="screenshot" src="index.images/business-rules-wiki-W.png" width="900" /></p>
+</li>
+<li>
+<p><strong>Transformation Decisions.</strong> Your change is correctly <em>absent</em>. It was your explicit instruction, not a transformation the agent proposed.</p>
+</li>
+</ol>
+<h2 id="generate-the-pdd-and-trace-it">Generate the PDD and trace it<a class="headerlink" href="#generate-the-pdd-and-trace-it" title="Permanent link">&para;</a></h2>
+<h3 id="1-generate-and-download-the-pdd">1. Generate and download the PDD<a class="headerlink" href="#1-generate-and-download-the-pdd" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Ask for the process document. Wait for it to generate and for the independent review to finish.</li>
+<li>
+<p>Download it as Word and open it.</p>
+<p><img alt="Save As dialog saving the generated PDD as a Word document" class="screenshot" src="index.images/save-pdd-as-word-W.png" width="900" /></p>
+</li>
+</ol>
+<p>The document opens with the problem statement and the objectives the project was given. You'll spot two objectives that were added mid-session: the 25% change was taken up as an objective in its own right. Then come the expected value, acceptance targets, scope boundaries, the current flow with its metrics, and the impact of each pain point.</p>
+<p><img alt="PDD in Word showing the problem statement and objectives" class="screenshot" src="index.images/pdd-problem-statement-W.png" width="900" /></p>
+<h3 id="2-trace-your-own-edits-in-the-pdd">2. Trace your own edits in the PDD<a class="headerlink" href="#2-trace-your-own-edits-in-the-pdd" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Scroll to the target flow and the <strong>What Changes AS-IS to TO-BE</strong> table.</p>
+<p>Every task in every stage has a type. That's the to-do list for the SDD. The What Changes table ties each change to the goal it serves and the metric it moves.</p>
+<p><img alt="PDD target flow table for the cost reconciliation stage" class="screenshot" src="index.images/pdd-target-flow-W.png" width="900" /></p>
+</li>
+<li>
+<p>Keep scrolling. You'll find the business rules (including the one you added live), the data model entities, a data dictionary lifted from the claim form, integrations, RACI, exceptions, human-in-the-loop and <strong>Action Center</strong> tasks, the compliance and regulatory matrix, and the KPI acceptance criteria.</p>
+</li>
+<li>Find both of your edits: the 25% variance decision, and the task you expanded earlier.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Where the run ends</p>
+<p>This run ends at a PDD. The SDD isn't generated here. What the PDD carries is everything an SDD needs, each item traced back to the evidence and to the KPI it moves. <a href="../process-to-production/">From Process to Production</a> picks up the story from here.</p>
+</div>
+<h3 id="3-publish-the-pdd-to-automation-hub">3. Publish the PDD to Automation Hub<a class="headerlink" href="#3-publish-the-pdd-to-automation-hub" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Once the PDD is created, choose to publish it to <strong>Automation Hub</strong> if you're prompted. If you aren't, ask Cartographer to do it.</p>
+<p><img alt="Publish this PDD to Automation Hub option in Cartographer" class="screenshot" src="index.images/publish-pdd-to-automation-hub-W.png" width="900" /></p>
+</li>
+<li>
+<p>Cartographer gives you a link to the new entry in Automation Hub. The confirmation lists the process ID and the document IDs, and offers two follow-ups: <strong>Design the solution</strong> and <strong>Open the published process in Automation Hub</strong>.</p>
+<p><img alt="Confirmation that the PDD was published to Automation Hub" class="screenshot" src="index.images/pdd-published-confirmation.png" width="700" /></p>
+<p><img alt="The new Cobalt Warranty Resolution entry in Automation Hub" class="screenshot" src="index.images/automation-hub-entry-W.png" width="900" /></p>
+</li>
+</ol>
+<h2 id="optional-ask-a-teammate">Optional: ask a teammate<a class="headerlink" href="#optional-ask-a-teammate" title="Permanent link">&para;</a></h2>
+<p>Only run this if you're ahead of the clock. Pair up, so someone is there to answer.</p>
+<p>Is 25% the right variance threshold? Instead of guessing, delegate the question to finance from inside the conversation.</p>
+<ol>
+<li>
+<p>Use <strong>Ask a teammate</strong> to write your question.</p>
+<p><img alt="Ask a teammate dialog with the question for the finance team" class="screenshot" src="index.images/ask-a-teammate-W.png" width="900" /></p>
+</li>
+<li>
+<p>Generate the shareable link and send it to your partner.</p>
+<p><img alt="Ask a teammate dialog showing the generated delegation link" class="screenshot" src="index.images/teammate-link-created-W.png" width="900" /></p>
+</li>
+</ol>
+<p>The link opens a session for your colleague with the question and its context already loaded. Their answer lands back in your conversation, ready for you to accept.</p>
+<div class="admonition tip">
+<p class="admonition-title">Training Environment</p>
+<p>Log in at <strong><a href="https://staging.uipath.com/uipathlabsworkshop">https://staging.uipath.com/uipathlabsworkshop</a></strong> and remember using tenant <strong>Fusion_Cartographe_20260921_ocrw</strong> for this exercise.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../process-to-production/" class="md-footer__link md-footer__link--next" aria-label="Next: From Process to Production">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                From Process to Production
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "toc.integrate", "toc.follow", "search.highlight", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>
