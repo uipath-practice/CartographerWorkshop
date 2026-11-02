@@ -87,7 +87,7 @@ Your coding agent needs two things to build on UiPath: the **`uip` CLI** to talk
 2. Sign in to the workshop environment. Your coding agent reuses this session, so it acts as you on the platform:
 
     ```bash
-    uip login --authority https://staging.uipath.com -t {{ training_tenant }}
+    uip login --authority {{ training_authority }} -t {{ training_tenant }}
     ```
 
 3. Install the UiPath skills for Claude Code:

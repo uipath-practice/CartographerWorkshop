@@ -65,9 +65,9 @@ These notes stay in the README on purpose. GitHub Pages can't restrict access, s
 
 | Organization URL | Tenant |
 |---|---|
-| https://staging.uipath.com/uipathlabsworkshop | `Fusion_Cartographe_20260921_ocrw` |
+| https://cloud.uipath.com/tpenlabs | `CartographerWorkshop` |
 
-The values live in `main.py`. Pages always use the `{{ training_url }}` and `{{ training_tenant }}` variables, so changing the environment is a one-file edit.
+The values live in `main.py`. Pages always use the `{{ training_url }}`, `{{ training_authority }}` and `{{ training_tenant }}` variables, so changing the environment is a one-file edit.
 
 ### Participant machines
 

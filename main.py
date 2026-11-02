@@ -23,13 +23,15 @@ import os
 
 ENVIRONMENTS = {
     "staging": {
-        "training_url": "https://staging.uipath.com/uipathlabsworkshop",
-        "training_tenant": "Fusion_Cartographe_20260921_ocrw",
+        "training_url": "https://cloud.uipath.com/tpenlabs",
+        "training_authority": "https://cloud.uipath.com",
+        "training_tenant": "CartographerWorkshop",
         "env_label": "Staging (build & preview)",
     },
     "prod": {
-        "training_url": "https://staging.uipath.com/uipathlabsworkshop",
-        "training_tenant": "Fusion_Cartographe_20260921_ocrw",
+        "training_url": "https://cloud.uipath.com/tpenlabs",
+        "training_authority": "https://cloud.uipath.com",
+        "training_tenant": "CartographerWorkshop",
         "env_label": "Workshop environment",
     },
 }
