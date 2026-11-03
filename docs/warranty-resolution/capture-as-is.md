@@ -4,23 +4,18 @@
 
 The evidence pack is the kind of material a team already has: process flows from two departments, a process-owner interview, a workshop transcript, an executive brief, a systems architecture draft and a printed claim record.
 
-[[[
-1. On the VM desktop, open the **Cobalt Ridge Industrial Equipment Warranty Resolution-FUSION** folder. It holds the evidence files.
-2. Attach the files listed below and send them with this prompt:
-|50|
-![VM desktop with the Cobalt Ridge Industrial Equipment Warranty Resolution-FUSION folder](index.images/vm-desktop-evidence-folder.png){ .screenshot }
-]]]
-
-```text
-Add to the AS-IS references.
-```
-
-!!! info "Using your own machine instead of the VM?"
-    Download the evidence pack and unzip it anywhere on your machine:
+1. Download the evidence pack and unzip it anywhere on the machine you're working on, the workshop VM or your own:
 
     [**Download the Cobalt Ridge evidence pack (.zip)**](dependencies/Cobalt-Ridge-Warranty-Resolution-Company-Source.zip){ .md-button download="Cobalt-Ridge-Warranty-Resolution-Company-Source.zip" }
 
-    It contains the same files as the folder on the VM desktop.
+    !!! note "Using the workshop VM?"
+        Open this workshop site in a browser on the VM, at [{{ config.site_url }}]({{ config.site_url }}), and download the pack from there. That way the files land on the VM, where you'll attach them.
+
+2. Attach the files listed below and send them with this prompt:
+
+    ```text
+    Add to the AS-IS references.
+    ```
 
 **Files to attach:**
 

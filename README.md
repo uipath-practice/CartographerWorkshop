@@ -71,8 +71,8 @@ The values live in `main.py`. Pages always use the `{{ training_url }}`, `{{ tra
 
 ### Participant machines
 
-- **Live workshop:** each participant connects to the workshop VM. The evidence pack sits on the VM desktop in the **Cobalt Ridge Industrial Equipment Warranty Resolution-FUSION** folder.
-- **Own machine:** participants with the latest Cartographer build can download the evidence pack from the exercise page (`docs/warranty-resolution/dependencies/`).
+- **Live workshop:** each participant connects to the workshop VM. The VM has no exercise files on it.
+- **Evidence pack:** every participant, on the VM or on their own machine, downloads it from the **Capture and review the AS-IS** page (`docs/warranty-resolution/dependencies/`).
 
 ### The evidence pack
 

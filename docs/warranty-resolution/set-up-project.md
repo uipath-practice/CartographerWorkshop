@@ -37,7 +37,7 @@
 
     ![New project dialog filled in with the project name and the Cobalt Ridge brief](index.images/project-name-and-instructions.png){ .screenshot width="600" }
 
-6. Leave **Context files** empty and **Approval mode** at its default. Keep **Disable screen context** checked, then click **Create**.
+6. Leave **Context files** empty and **Approval mode** at its default, then click **Create**.
 
 You now have an empty project with no conversations yet. The **Business Analysis** and **project-checklist** skills are listed, and your instructions sit in the right panel.
 

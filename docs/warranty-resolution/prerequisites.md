@@ -13,9 +13,7 @@ If you don't have Cartographer installed on your own machine, connect to the vir
 
 After you confirm your attendance, the sandbox gets created and you can open it.
 
-### Optional: register your VM
-
-You can skip this step and go straight to [Open the Assistant](#3-open-the-assistant).
+### Optional: you might need to Register your VM
 
 [[[
 1. In the Windows search bar, type **Email & accounts**.
@@ -33,8 +31,6 @@ If you prefer to use your own machine, make sure it meets these prerequisites:
 - Assistant installed with the Robot in **attended (user) mode**. Sign-in doesn't work when the Robot runs as a Windows service.
 - PowerShell allowed on the machine, since Cartographer uses it to start.
 - A UiPath user license other than Express.
-
-The exercise files are on the VM desktop. On your own machine, you'll download them in [Capture and review the AS-IS](capture-as-is.md).
 
 ## 3. Open the Assistant
 
