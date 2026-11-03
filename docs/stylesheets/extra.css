@@ -106,6 +106,19 @@
   color: #ffffff !important;
 }
 
+/* Next-page button at the end of each page; the footer keeps only the Previous link */
+.next-page {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2.5rem;
+}
+.next-page .md-button::after {
+  content: " \2192";
+}
+.md-footer__link--next {
+  display: none;
+}
+
 /* Image utilities */
 
 /* Center an image: ![alt](img.png){ .center } */

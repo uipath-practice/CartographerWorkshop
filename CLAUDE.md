@@ -17,13 +17,14 @@ The audience knows the UiPath Platform but is new to Cartographer. The workshop 
 | Page | File |
 |------|------|
 | Home | `docs/index.md` |
-| Warranty Resolution at Cobalt Ridge Automation | `docs/warranty-resolution/index.md` |
-| From Process to Production | `docs/process-to-production/index.md` |
+| Warranty Resolution at Cobalt Ridge Automation | `docs/warranty-resolution/` (overview in `index.md`, one file per section) |
+| From Process to Production | `docs/process-to-production/` (overview in `index.md`, one file per section) |
 | Next Steps | `docs/next-steps.md` |
 
-- Each exercise is a **single page**: `index.md` holds the whole guide, with `##` sections and `### N.` numbered steps.
+- Each exercise is **split into pages, one per section**. `index.md` holds the plan and the goal; every other section is its own `.md` file in the same folder, with `## N.` numbered steps. Prerequisites stay on one page.
+- Every page except Next Steps ends with a next-page button: `<div class="next-page" markdown>` around `[Next: <short name of the next page>](<file>.md){ .md-button .md-button--primary }`. Add new pages to `mkdocs.yml` nav in reading order.
 - Screenshots live in the page's `index.images/` folder. Downloads live in `dependencies/`.
-- The Warranty Resolution page opts in to collapsible sections with `<div class="collapsible-sections" hidden></div>` right after the title. The left navigation tree's sections are collapsible on every page.
+- A page can opt in to collapsible `##` sections with `<div class="collapsible-sections" hidden></div>` right after the title. The left navigation tree's sections are collapsible on every page.
 
 ---
 

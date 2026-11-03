@@ -54,8 +54,24 @@ markdown_extensions:
 # Published navigation only. Work-in-progress pages live in mkdocs.local.yml.
 nav:
   - Home: index.md
-  - Warranty Resolution at Cobalt Ridge: warranty-resolution/index.md
-  - From Process to Production: process-to-production/index.md
+  - Warranty Resolution at Cobalt Ridge:
+      - Overview: warranty-resolution/index.md
+      - How Cartographer works: warranty-resolution/how-cartographer-works.md
+      - About Cobalt Ridge Automation: warranty-resolution/about-cobalt-ridge.md
+      - Prerequisites: warranty-resolution/prerequisites.md
+      - Set up the project: warranty-resolution/set-up-project.md
+      - Capture and review the AS-IS: warranty-resolution/capture-as-is.md
+      - Design the future state: warranty-resolution/design-future-state.md
+      - Make live edits: warranty-resolution/live-edits.md
+      - Generate the PDD: warranty-resolution/generate-pdd.md
+      - "Optional: ask a teammate": warranty-resolution/ask-a-teammate.md
+  - From Process to Production:
+      - Overview: process-to-production/index.md
+      - The PDD isn't the end of the story: process-to-production/the-journey.md
+      - Design the solution: process-to-production/design-the-solution.md
+      - Build it with a coding agent: process-to-production/build-with-a-coding-agent.md
+      - Review, publish and run it: process-to-production/review-publish-run.md
+      - Close the loop: process-to-production/close-the-loop.md
   - Next Steps: next-steps.md
 
 extra_css:

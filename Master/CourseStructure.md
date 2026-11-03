@@ -12,7 +12,9 @@ An exercise can take one of two shapes.
 
 ### Single-page exercise (used in this course)
 
-Both exercises in this course are single-page: `docs/warranty-resolution/index.md` and `docs/process-to-production/index.md`. The whole guide lives in `index.md`. Each part of the exercise is a `##` section, and the hands-on steps inside it are `### N.` substeps. The page is registered in the nav as one entry.
+> **Current course layout:** both exercises are now split into one page per section (see `CLAUDE.md`). `index.md` holds the plan and goal, each section is its own file with `## N.` steps, and every page ends with a next-page button. The single-page template below still describes the content of each section.
+
+In the single-page shape, the whole guide lives in `index.md`. Each part of the exercise is a `##` section, and the hands-on steps inside it are `### N.` substeps. The page is registered in the nav as one entry.
 
 ```
 # Title                           ← Exercise name (noun phrase)

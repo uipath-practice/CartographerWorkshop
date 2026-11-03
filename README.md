@@ -72,7 +72,6 @@ The values live in `main.py`. Pages always use the `{{ training_url }}`, `{{ tra
 ### Participant machines
 
 - **Live workshop:** each participant connects to the workshop VM. The evidence pack sits on the VM desktop in the **Cobalt Ridge Industrial Equipment Warranty Resolution-FUSION** folder.
-- **Self-paced (UiPath internal):** create a UiPath Studio & Robot sandbox from the **Internal Enablement Workshop** template on [uipathlabs.uipath.com](https://uipathlabs.uipath.com/sandboxes/new).
 - **Own machine:** participants with the latest Cartographer build can download the evidence pack from the exercise page (`docs/warranty-resolution/dependencies/`).
 
 ### The evidence pack

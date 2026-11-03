@@ -77,7 +77,7 @@ Each exercise lives under `docs/` in its own folder.
 
 ### Single-page exercise (used in this course)
 
-Both current exercises are single-page: `index.md` holds the full guide, with `##` sections and `### N.` numbered steps. The **Warranty Resolution at Cobalt Ridge Automation** exercise is the reference implementation:
+Both current exercises are split into one page per section: `index.md` holds the plan and goal, and each section is its own `.md` file next to it, sharing the `index.images/` and `dependencies/` folders. The **Warranty Resolution at Cobalt Ridge Automation** exercise is the reference implementation:
 
 ```
 docs/warranty-resolution/
