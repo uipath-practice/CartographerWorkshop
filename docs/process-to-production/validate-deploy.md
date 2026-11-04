@@ -26,6 +26,18 @@ Go on once validation shows no errors.
 
 The deployment is activated automatically, so your process is ready to run as soon as the command finishes.
 
+!!! warning "\"No UiPath solution found in this workspace\"?"
+    VS Code has the parent folder open instead of the solution folder. Use **File > Open Folder** to open the folder that contains the `.uipx` file, then run **UiPath: Package & Deploy** again.
+
+    If there's no `.uipx` file anywhere, the Flow was built outside a solution. Create one next to your project folder, move the project folder into it, and register it:
+
+    ```bash
+    uip solution init {YourName}_CobaltFlow
+    uip solution projects add "<path to your project folder>"
+    ```
+
+    Then open the new solution folder in VS Code and package again.
+
 !!! note "Two steps instead of one"
     **UiPath: Package** and **UiPath: Deploy** run the same two steps separately, if you want to check the package before you upload it.
 

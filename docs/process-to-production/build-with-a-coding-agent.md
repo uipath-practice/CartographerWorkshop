@@ -4,19 +4,18 @@ In the first exercise, you asked Cartographer to run two stages of the Cobalt Ri
 
 ## 1. Create the Maestro project
 
-1. Create an empty folder for your work, for example `{YourName}-CobaltFlow`, and open it in VS Code (**File > Open Folder**).
+1. Create an empty parent folder for your work, for example `{YourName}-Cobalt`, and open it in VS Code (**File > Open Folder**).
 2. When VS Code asks whether you trust the authors of the files in this folder, click **Yes, I trust the authors**. In Restricted Mode, extensions are turned off and the **UiPath** icon doesn't load. If you closed the prompt, run **Workspaces: Manage Workspace Trust** from the Command Palette and trust the folder.
 3. Click the **UiPath** icon in the Activity Bar. In the **UiPath Maestro** view, click **Create New** and choose **Maestro Orchestrate** from the **New Project** list.
-4. Name the solution and the project with your name as a prefix, for example `{YourName}_CobaltFlow`.
-
-The extension creates the solution, the project and a default `.flow` file, and opens the empty flow on the canvas.
+4. Name the solution and the project with your name as a prefix, for example `{YourName}_CobaltFlow`. The extension scaffolds the solution in its own subfolder, with the project and a default `.flow` file, and **opens it in a new VS Code window**.
+5. Switch to that new window and keep working there. Its folder is the solution folder: it holds the `.uipx` solution file, and packaging and deploying only work from it. Trust this folder too if VS Code asks.
 
 !!! tip "Why the name prefix?"
     Everyone in the workshop builds in the same tenant. A `{YourName}` prefix keeps your solutions, processes and connections from colliding with your neighbour's.
 
 ## 2. Add the SDD to the folder
 
-Copy the SDD you downloaded in [Review the SDD](review-the-sdd.md) into the folder you just opened, or unzip the example SDD there. Your coding agent reads it from there.
+Copy the SDD you downloaded in [Review the SDD](review-the-sdd.md) into the solution folder, the one open in the new window, or unzip the example SDD there. Your coding agent reads it from there.
 
 ## 3. Pick your stage
 
