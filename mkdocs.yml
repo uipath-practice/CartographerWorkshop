@@ -70,9 +70,11 @@ nav:
       - Overview: process-to-production/index.md
       - The Documentation isn't the end of the story: process-to-production/the-journey.md
       - Review the SDD: process-to-production/review-the-sdd.md
-      - Build it with a coding agent: process-to-production/build-with-a-coding-agent.md
-      - Review, publish and run it: process-to-production/review-publish-run.md
+      - Set up VS Code: process-to-production/set-up-vs-code.md
+      - Build your Flow: process-to-production/build-with-a-coding-agent.md
+      - Validate, deploy and open in Studio Web: process-to-production/validate-deploy.md
       - Close the loop: process-to-production/close-the-loop.md
+      - "Optional: build the whole case": process-to-production/build-the-whole-case.md
   - Next Steps: next-steps.md
 
 extra_css:

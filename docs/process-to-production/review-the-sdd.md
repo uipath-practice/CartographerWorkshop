@@ -4,8 +4,8 @@
     Have these ready **before** you start:
 
     - **The first exercise, finished:** your Cobalt Ridge project, with the PDD and the SDD published to Automation Hub.
+    - **VS Code 1.110.0 or later** and **Node.js:** you'll install the UiPath Maestro extension on the next page.
     - **A coding agent:** this guide uses [**Claude Code**](https://docs.claude.com/en/docs/claude-code/overview).
-    - **Node.js:** needed to install the **`uip` CLI**.
     - **Access to the workshop environment:** in this workshop we use `{{ training_url }}/{{ training_tenant }}`. Talk to your trainer if you haven't received an invitation.
 
 ## 1. Open the SDD you generated
@@ -18,11 +18,16 @@ Go back to your Cobalt Ridge project in **Cartographer**. At the end of the firs
 ## 2. Mark it as reviewed and download it
 
 1. Cartographer deliberately leaves the build hand-off open until you approve the design. Mark the SDD as **reviewed** in the document panel.
-2. Click **Download** to save the SDD as a Word document. You'll hand this file to the coding agent.
+2. Click **Download** to save the SDD. You'll hand this file to the coding agent.
+
+!!! note "No SDD, or yours is incomplete?"
+    Download the example SDD from the Cobalt Ridge run and start from it. It's a Markdown file, ready for your coding agent, with both Maestro Flow stages included.
+
+    [**Download the example SDD (.zip)**](dependencies/Cobalt-Ridge-Warranty-Resolution-SDD.zip){ .md-button download="Cobalt-Ridge-Warranty-Resolution-SDD.zip" }
 
 !!! tip "Why this matters"
     The build never starts from an unreviewed design. A person signs off on the SDD before any coding agent touches it.
 
 <div class="next-page" markdown>
-[Next: Build it with a coding agent](build-with-a-coding-agent.md){ .md-button .md-button--primary }
+[Next: Set up VS Code and the Maestro extension](set-up-vs-code.md){ .md-button .md-button--primary }
 </div>
