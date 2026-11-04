@@ -64,11 +64,12 @@ nav:
       - Design the future state: warranty-resolution/design-future-state.md
       - Make live edits: warranty-resolution/live-edits.md
       - Generate the PDD: warranty-resolution/generate-pdd.md
+      - Generate the SDD: warranty-resolution/generate-sdd.md
       - "Optional: ask a teammate": warranty-resolution/ask-a-teammate.md
   - From Process to Production:
       - Overview: process-to-production/index.md
       - The PDD isn't the end of the story: process-to-production/the-journey.md
-      - Design the solution: process-to-production/design-the-solution.md
+      - Review the SDD: process-to-production/review-the-sdd.md
       - Build it with a coding agent: process-to-production/build-with-a-coding-agent.md
       - Review, publish and run it: process-to-production/review-publish-run.md
       - Close the loop: process-to-production/close-the-loop.md

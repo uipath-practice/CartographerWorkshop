@@ -26,5 +26,5 @@ On the UiPath Platform, the design keeps moving. Here's the journey:
 The same design is carried from the first interview to the running process. Nobody retypes it, and it keeps its link to the evidence and to the KPI it serves.
 
 <div class="next-page" markdown>
-[Next: Design the solution with Cartographer](design-the-solution.md){ .md-button .md-button--primary }
+[Next: Review the SDD](review-the-sdd.md){ .md-button .md-button--primary }
 </div>

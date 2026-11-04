@@ -25,21 +25,9 @@ The document opens with the problem statement and the objectives the project was
 2. Keep scrolling. You'll find the business rules (including the one you added live), the data model entities, a data dictionary lifted from the claim form, integrations, RACI, exceptions, human-in-the-loop and **Action Center** tasks, the compliance and regulatory matrix, and the KPI acceptance criteria.
 3. Find both of your edits: the 20% variance rule, and the task you expanded earlier.
 
-!!! tip "Where the run ends"
-    This run ends at a PDD. The SDD isn't generated here. What the PDD carries is everything an SDD needs, each item traced back to the evidence and to the KPI it moves. [From Process to Production](../process-to-production/index.md) picks up the story from here.
-
-## 3. Publish the PDD to Automation Hub
-
-1. Once the PDD is created, choose to publish it to **Automation Hub** if you're prompted. If you aren't, ask Cartographer to do it.
-
-    ![Publish this PDD to Automation Hub option in Cartographer](index.images/publish-pdd-to-automation-hub-W.png){ .screenshot width="900" }
-
-2. Cartographer gives you a link to the new entry in Automation Hub. The confirmation lists the process ID and the document IDs, and offers two follow-ups: **Design the solution** and **Open the published process in Automation Hub**.
-
-    ![Confirmation that the PDD was published to Automation Hub](index.images/pdd-published-confirmation.png){ .screenshot width="700" }
-
-    ![The new Cobalt Warranty Resolution entry in Automation Hub](index.images/automation-hub-entry-W.png){ .screenshot width="900" }
+!!! tip "Why this matters"
+    The PDD carries everything an SDD needs, each item traced back to the evidence and to the KPI it moves. That's what you'll build the SDD from next.
 
 <div class="next-page" markdown>
-[Next: Ask a teammate (optional)](ask-a-teammate.md){ .md-button .md-button--primary }
+[Next: Generate the SDD](generate-sdd.md){ .md-button .md-button--primary }
 </div>
