@@ -5,8 +5,9 @@ In the first exercise, you asked Cartographer to run two stages of the Cobalt Ri
 ## 1. Create the Maestro project
 
 1. Create an empty folder for your work, for example `{YourName}-CobaltFlow`, and open it in VS Code (**File > Open Folder**).
-2. Click the **UiPath** icon in the Activity Bar. In the **UiPath Maestro** view, click **Create New** and choose **Maestro Orchestrate** from the **New Project** list.
-3. Name the solution and the project with your name as a prefix, for example `{YourName}_CobaltFlow`.
+2. When VS Code asks whether you trust the authors of the files in this folder, click **Yes, I trust the authors**. In Restricted Mode, extensions are turned off and the **UiPath** icon doesn't load. If you closed the prompt, run **Workspaces: Manage Workspace Trust** from the Command Palette and trust the folder.
+3. Click the **UiPath** icon in the Activity Bar. In the **UiPath Maestro** view, click **Create New** and choose **Maestro Orchestrate** from the **New Project** list.
+4. Name the solution and the project with your name as a prefix, for example `{YourName}_CobaltFlow`.
 
 The extension creates the solution, the project and a default `.flow` file, and opens the empty flow on the canvas.
 
