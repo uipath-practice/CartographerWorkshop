@@ -32,15 +32,15 @@ The evidence pack is the kind of material a team already has: process flows from
     - `00_START_HERE_BA-notes.md`: background for the facilitator, not input for the agent.
     - `meta-DO-NOT-FEED-TO-AGENT.txt`: held back on purpose. It's used to test provenance tracking.
 
-![Evidence files attached in the composer with the Add to the AS-IS references prompt](index.images/attach-evidence-files-W.png){ .screenshot width="900" }
+![Evidence files attached in the composer with the Add to the AS-IS references prompt](index.images/add-the-evidence-W.png){ .screenshot width="900" }
 
 ## 2. Watch the current-state wiki build
 
 While the agent reads, open **Current Process** in the left navigation and follow the pages as it writes them: **Overview**, **Business Rules**, **Compliance**, **Data Inputs Outputs**, **Exception Handling**, **Metrics**, **Pain Points**, **Scheduling and Triggers** and **Source Inventory**.
 
-The files appear one by one. When it's done, the agent tells you the source-grounded facts are written and it's synchronizing the checklist.
+The files appear one by one. When it's done, the agent tells you the source-grounded facts are written and it's synchronizing the task list.
 
-![Cartographer reporting that the AS-IS reference intake is complete](index.images/as-is-intake-complete-W.png){ .screenshot width="900" }
+![Current Process pages in the left navigation](index.images/current-process-tab-W.png){ .screenshot width="900" }
 
 ## 3. Check the provenance on a captured item
 
@@ -48,19 +48,19 @@ Open **Pain Points** and expand **Sources and Metadata** at the top of the page.
 
 You can see which agent captured each item and when, the source documents and the exact sections it came from, and the file metadata. This provenance stays attached for the whole life of the Map of Work.
 
-![Pain Points page with the Sources and Metadata panel expanded](index.images/pain-points-provenance-W.png){ .screenshot width="900" }
+![Pain Points page with the Sources and Metadata panel expanded](index.images/pain-points-W.png){ .screenshot width="900" }
 
-## 4. Choose the map format, then read the checklist
+## 4. Choose the map format, then read the task list
 
 1. The agent asks how today's process should be mapped. It offers a case map (recommended), a BPMN model or a simple flow. Read its reasoning, then pick **case map**.
 
-    ![Clarifying question offering a case map, a BPMN model or a simple flow for the AS-IS](index.images/choose-map-format-W.png){ .screenshot width="900" }
+    ![Clarifying question offering a case map, a BPMN model or a simple flow for the AS-IS](index.images/case-map-W.png){ .screenshot width="900" }
 
-2. Open the **Checklist** panel. You'll see a readiness count, plus how many rows are confirmed, pending, sourced from documents, need confirmation or are missing. Yellow tags mark anything the agent assumed from process knowledge rather than took from your documents.
+2. Open the **Task list** panel. You'll see a readiness count, plus how many rows are confirmed, pending, sourced from documents, need confirmation or are missing. Yellow tags mark anything the agent assumed from process knowledge rather than took from your documents.
 
-    ![Checklist rows with facts sourced from documents and Confirm buttons](index.images/confirm-checklist-facts-W.png){ .screenshot width="900" }
+    ![Task list with the readiness count and the confirmed, pending and from-docs counts](index.images/task-list-readiness-W.png){ .screenshot width="900" }
 
-    ![Checklist readiness summary with confirmed, pending and missing counts](index.images/checklist-readiness-W.png){ .screenshot width="900" }
+    ![Task list rows with facts sourced from documents and Confirm buttons](index.images/task-list-confirm-W.png){ .screenshot width="900" }
 
 <div class="next-page" markdown>
 [Next: Design the future state](design-future-state.md){ .md-button .md-button--primary }

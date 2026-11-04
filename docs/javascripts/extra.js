@@ -114,3 +114,31 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('hashchange', expandForHash);
   expandForHash();
 });
+
+// Lightbox for large diagrams.
+// Links marked { .lightbox } open their image in a full-screen overlay instead of a new page.
+// Click anywhere or press Escape to close. Without JavaScript the link still opens the image.
+document.addEventListener('DOMContentLoaded', function () {
+  var overlay = document.createElement('div');
+  overlay.className = 'lightbox-overlay';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-label', 'Image preview');
+  overlay.innerHTML = '<img alt=""><span class="lightbox-hint">Click anywhere or press Esc to close</span>';
+  document.body.appendChild(overlay);
+  var img = overlay.querySelector('img');
+
+  var close = function () { overlay.classList.remove('is-open'); };
+  overlay.addEventListener('click', close);
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') close();
+  });
+
+  document.querySelectorAll('a.lightbox').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      img.src = link.href;
+      img.alt = link.textContent.trim() || 'Diagram';
+      overlay.classList.add('is-open');
+    });
+  });
+});

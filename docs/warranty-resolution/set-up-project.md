@@ -39,9 +39,9 @@
 
 6. Leave **Context files** empty and **Approval mode** at its default, then click **Create**.
 
-You now have an empty project with no conversations yet. The **Business Analysis** and **project-checklist** skills are listed, and your instructions sit in the right panel.
+You now have an empty **Business Analysis** project with no conversations yet. Your instructions sit in the **Project instructions** panel on the right.
 
-![Empty Cartographer project with the brief in the Project instructions panel](index.images/empty-project-created-W.png){ .screenshot width="900" }
+![New Business Analysis project with the brief in the Project instructions panel](index.images/business-analysis-W.png){ .screenshot width="900" }
 
 ## 2. Ask what it already knows, before uploading anything
 
@@ -59,11 +59,11 @@ Verify your process-knowledge / process-skills and answer only from it:
 (4) where UiPath best-practice suggests Document Understanding vs. DMN / business rules vs. AI Agent.
 ```
 
-![Knowledge-check prompt typed into the Cartographer composer](index.images/knowledge-check-prompt-W.png){ .screenshot width="900" }
+![Knowledge-check prompt sent to Cartographer](index.images/ask-what-it-knows-W.png){ .screenshot width="900" }
 
 The agent consults its **Process Knowledge** and answers all four parts. You get KPIs with reference baselines plus good and stretch targets, a list of controls, personas by stage, and a component-placement table covering Document Understanding, DMN and business rules, AI agents and human-in-the-loop.
 
-![Component placement table recommending Document Understanding, DMN, AI Agent or human action per type of work](index.images/component-placement-answer-W.png){ .screenshot width="900" }
+![Cartographer answering from its Process Knowledge](index.images/current-process-knowledge-W.png){ .screenshot width="900" }
 
 !!! tip "Why this matters"
     Anything that comes from process knowledge rather than from your own documents is flagged as **not confirmed**. Cartographer never passes off a general industry assumption as one of your facts.

@@ -499,3 +499,41 @@ img + em {
 .md-nav--secondary .toc-toggle:hover { color: #FA4616; }
 .md-nav--secondary .toc-collapsed > .toc-toggle::before { transform: translate(-0.08rem, 0.08rem) rotate(-45deg); }
 .md-nav--secondary .toc-collapsed > nav.md-nav { display: none; }
+
+/* Lightbox overlay for diagrams: [text](image.png){ .lightbox } */
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(15, 20, 25, 0.88);
+  overflow: auto;
+  cursor: zoom-out;
+  padding: 2rem;
+}
+.lightbox-overlay.is-open {
+  display: block;
+}
+.lightbox-overlay img {
+  display: block;
+  max-width: none;
+  width: 2400px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 4px;
+}
+.lightbox-hint {
+  position: fixed;
+  top: 0.6rem;
+  right: 1rem;
+  color: #ffffff;
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+.md-typeset a.lightbox:not(:has(img)) {
+  border-bottom: 1px dashed currentColor;
+  cursor: zoom-in;
+}
+.md-typeset a.lightbox img {
+  cursor: zoom-in;
+}

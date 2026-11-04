@@ -2,7 +2,7 @@
 
 Only run this if you're ahead of the clock. Pair up, so someone is there to answer.
 
-Is 25% the right variance threshold? Instead of guessing, delegate the question to finance from inside the conversation.
+Is 20% the right variance threshold? Instead of guessing, delegate the question to finance from inside the conversation.
 
 1. Use **Ask a teammate** to write your question.
 
