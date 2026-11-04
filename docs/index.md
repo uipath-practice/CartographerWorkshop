@@ -13,7 +13,7 @@ The workshop has two exercises. The first one is fully hands-on. The second one 
 
 [**Warranty Resolution at Cobalt Ridge Automation**](warranty-resolution/index.md): Cobalt Ridge Automation handles about 7,400 warranty claims a year. A claim takes 11.4 days to resolve, and a P1 line outage keeps a customer's production down for 96 hours. Your brief: get resolution down to 3.5 days and P1 downtime down to 24 hours. You'll take the process from a blank project to a published **Process Definition Document (PDD)** and an SDD generated from it. Along the way you'll build a current-state wiki with provenance on every fact, choose how to map today's process, design a future state where every change is argued against a KPI, make live edits that stay inside compliance guardrails, and publish the PDD and SDD to **Automation Hub**.
 
-[**From Process to Production**](process-to-production/index.md): The PDD isn't the end of the story. This exercise follows the design downstream: a coding agent such as **Claude Code** builds and tests the solution from your **Solution Design Document (SDD)** with the **UiPath skills**, and the result runs in **Maestro** and **Orchestrator**. Runtime insights then flow back into the Map of Work, so the design keeps improving.
+[**From Process to Production**](process-to-production/index.md): The Documentation isn't the end of the story. This exercise follows the design downstream: a coding agent such as **Claude Code** builds and tests the solution from your **Solution Design Document (SDD)** with the **UiPath skills**, and the result runs in **Maestro** and **Orchestrator**. Runtime insights then flow back into the Map of Work, so the design keeps improving.
 
 ## Key concepts
 

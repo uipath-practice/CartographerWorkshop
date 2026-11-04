@@ -37,7 +37,27 @@ Update the SDD to USE Maestro Flow for both "Asset, Entitlement and Evidence Rea
 
 ![Cartographer recommending stages for Maestro Flow, followed by the update request](index.images/flow-suggestions.png){ .screenshot width="700" }
 
-## 3. Publish the PDD and SDD
+## 3. Refine the SDD, or bring your own template
+
+The SDD isn't final until it works for you. Read it, and ask for changes the same way you shaped the TO-BE. You can even hand Cartographer your own SDD template and ask it to follow that structure.
+
+1. Download the example template, or use your own team's template:
+
+    [**Download the SDD template (.docx)**](dependencies/SDD-Template.docx){ .md-button download="SDD-Template.docx" }
+
+2. Attach the template and send:
+
+    ```text
+    Can we modify the SDD cause it's not very easy to read. Would you be able to follow the attached template?
+    ```
+
+3. Be specific about what's missing. For example:
+
+    ```text
+    The current SDD doesn't contain the diagram nor process overview, activities, artefacts (suggested projects, possible assets and storage buckets), integrated components, error handling, triggers, project structure, testing strategy and next steps. I would expect to see the 2 Flow processes detailed here too
+    ```
+
+## 4. Publish the PDD and SDD
 
 1. Choose to publish both documents to **Automation Hub** if you're prompted. If you aren't, ask Cartographer to do it, for example:
 

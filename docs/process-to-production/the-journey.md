@@ -1,4 +1,4 @@
-# The PDD isn't the end of the story
+# The Documentation isn't the end of the story
 
 In most organizations, a process document is where the work stops being visible. It gets attached to an email, someone rebuilds it as a slide, and the developer who finally builds the automation never sees the evidence behind it.
 
